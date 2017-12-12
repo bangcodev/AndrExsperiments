@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">MyExperiments</string>
+    <string name="app_name">My Experiments</string>
+    <string name="title_activity_my_navigation">My Experiments</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="button_label_count">Count</string>
+    <string name="button_label_toast">Toast</string>
+    <string name="count_initial_value">0</string>
+    <string name="hello_toast">Hello Toast</string>
 </resources>
