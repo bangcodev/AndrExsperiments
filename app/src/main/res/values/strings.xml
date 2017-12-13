@@ -1,17 +1,60 @@
 <resources>
-    <string name="app_name">My Experiments</string>
-    <string name="title_activity_my_navigation">My Experiments</string>
+    <string name="app_name">BangCode Experiments</string>
+    <!--<string name="title_activity_my_navigation">My Experiments</string>-->
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!-- TODO: Value for Hello Toast -->
     <string name="button_label_count">Count</string>
     <string name="button_label_toast">Toast</string>
     <string name="count_initial_value">0</string>
     <string name="hello_toast">Hello Toast</string>
+
+    <!-- TODO:Value for working Text View -->
+    <string name="article_title">Perbedaan Programmer dan Developer</string>
+    <string name="article_subtitle1">Programmer</string>
+    <string name="article_text1">Programmer adalah seseorang yang mampu menyelesaikan masalah dengan menggunakan bahasa pemrograman. Mereka mempunyai banyak kemampuan terdiri dari berbagai level, mereka handal dalam menulis kode, mengerti algoritma dan sering bekerja sendiri. \n\n
+
+    Seorang programmer menguasai setidaknya satu bahasa pemrograman dan handal dalam menggunakannya. Programmer biasanya merupakan lulusan dari Universitas dengan jurusan ilmu komputer atau informatika. Ada juga programmer yang bukan berasal dari Universitas, seperti pelajar sekolah menengah kejuruan di bidang informatika, atau orang yang belajar otodidak dari buku, internet, kursus, bootcamp dan sebagainya.\n\n
+    </string>
+
+    <string name="article_subtitle2">Developer</string>
+    <string name="article_text2">Developer adalah seorang programmer yang sudah terlatih, mereka tidak hanya menyelesaikan masalah, namun juga membangun suatu produk. Mereka melakukannya sesuai dengan prinsip-prinsip desain dan implementasi rekayasa perangkat lunak, termasuk hal-hal seperti kinerja, maintainability, skalabilitas, ketahanan, dan idealnya keamanan diikutkan juga. \n\n
+
+   Developer juga bisa dikatakan sebagai seseorang yang dapat menggunakan banyak sistem dan bahasa pemrograman yang berbeda serta membuatnya terhubung satu sama lain. Developer merupakan seseorang yang profesional, dapat bekerja dengan orang lain, dan punya kemampuan berkomunikasi yang baik.\n\n
+
+        Developer memiliki pengalaman yang cukup untuk menyelesaikan masalah yang sudah pernah ia selesaikan sebelumnya dan tahu mana metode yang berhasil dan mana yang tidak. Developer biasanya menggambarkan tujuan, dan mereka merancang perangkat lunak yang akan diambil. Developer memiliki lebih banyak kebebasan karena mereka memiliki pengalaman yang lebih dalam. \n\n
+
+        Programmer juga bisa disebut coder, sedangkan developer juga bisa disebut software engineer. Lebih sederhana, programmer bisa dikatakan seorang penyelesai masalah dan Developer bisa dikatakan seorang yang tidak hanya menyelesaikan masalah namun punya kinerja yang terstruktur dan disiplin. \n\n
+    </string>
+
+
+    <!-- TODO: Value class and fragment -->
+    <string name="basic_text_view">Basic Text View</string>
+    <string name="constraint_hello_toast">Constraint Hello Toast</string>
+    <string name="linear_hello_toast">Linear Hello Toast</string>
+    <string name="relative_hello_toast">Relative Hello Toast</string>
+    <string name="linear_fragment">Linear</string>
+    <string name="relative_fragment">Relative</string>
+    <string name="constraint_fragment">Constraint</string>
+    <string name="basic_fragment">Basic Text</string>
+
+
+
+    <!--TODO: implicits intent-->
+    <string name="edittext_url">http://developer.android.com</string>
+    <string name="button_url">Open Website</string>
+
+    <string name="edittext_loc">orion techno</string>
+    <string name="button_loc">Open Location</string>
+
+    <string name="edittext_share">\'Orion techno adalah rumah pembuat software, multimedia dan juga smarthome</string>
+    <string name="button_share">Share Konten Ini </string>
+    <string name="implisitintent">Implisit Intent</string>
 </resources>

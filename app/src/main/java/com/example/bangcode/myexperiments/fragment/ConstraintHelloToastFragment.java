@@ -55,7 +55,7 @@ public class ConstraintHelloToastFragment extends Fragment implements View.OnCli
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        getActivity().setTitle("Constraint Hello Toast");
+        getActivity().setTitle(getString(R.string.constraint_hello_toast));
 
         mShowCount=view.findViewById(R.id.show_count_constraint);
         showToast=view.findViewById(R.id.button_toast_constraint);

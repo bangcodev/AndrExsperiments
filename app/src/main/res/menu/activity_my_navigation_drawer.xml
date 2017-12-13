@@ -5,7 +5,17 @@
         <item
             android:id="@+id/hellotoast_app"
             android:icon="@drawable/ic_apps_black"
-            android:title="Hello Toast" />
+            android:title="Show and Count" />
+
+        <item
+            android:id="@+id/textview_app"
+            android:icon="@drawable/ic_text_fields_black"
+            android:title="Programmer vs Developer" />
+
+        <item
+            android:id="@+id/implicitsintent"
+            android:icon="@drawable/ic_web_black"
+            android:title="Implisit Intent" />
 
     </group>
 

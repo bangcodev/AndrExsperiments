@@ -61,9 +61,9 @@ public class TabHelloToastFragment extends Fragment {
         PagerAdapter pagerAdapter = new PagerAdapter(getChildFragmentManager());
         mypager.setAdapter(pagerAdapter);
 
-        pagerAdapter.add(new LinearHelloToastFragment(), "Linear");
-        pagerAdapter.add(new RelativeHelloToastFragment(), "Relative");
-        pagerAdapter.add(new ConstraintHelloToastFragment(), "Constraint");
+        pagerAdapter.add(new LinearHelloToastFragment(), getString(R.string.linear_fragment));
+        pagerAdapter.add(new RelativeHelloToastFragment(), getString(R.string.relative_fragment));
+        pagerAdapter.add(new ConstraintHelloToastFragment(), getString(R.string.constraint_fragment));
 
         myTab.setupWithViewPager(mypager);
     }

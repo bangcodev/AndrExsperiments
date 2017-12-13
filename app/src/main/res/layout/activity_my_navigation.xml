@@ -8,6 +8,11 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
+    <TextView
+        android:id="@+id/tex_uri_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <include
         layout="@layout/app_bar_my_navigation"
         android:layout_width="match_parent"
