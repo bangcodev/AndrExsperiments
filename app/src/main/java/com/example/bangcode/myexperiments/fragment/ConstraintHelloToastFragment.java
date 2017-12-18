@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.bangcode.myexperiments.R;
+import com.example.bangcode.myexperiments.activity.MyNavigation;
 
 
 public class ConstraintHelloToastFragment extends Fragment implements View.OnClickListener{
@@ -54,8 +55,7 @@ public class ConstraintHelloToastFragment extends Fragment implements View.OnCli
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        getActivity().setTitle(getString(R.string.constraint_hello_toast));
+        ((MyNavigation)getActivity()).setActionBarTitle(getString(R.string.constraint_hello_toast));
 
         mShowCount=view.findViewById(R.id.show_count_constraint);
         showToast=view.findViewById(R.id.button_toast_constraint);

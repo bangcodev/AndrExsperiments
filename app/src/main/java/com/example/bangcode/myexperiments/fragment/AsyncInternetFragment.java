@@ -1,27 +1,34 @@
 package com.example.bangcode.myexperiments.fragment;
 
-
+import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
 import com.example.bangcode.myexperiments.R;
 import com.example.bangcode.myexperiments.activity.MyNavigation;
 
 
-public class BasicTextViewFragment extends Fragment {
+public class AsyncInternetFragment extends Fragment {
+
+    private Button button;
+    EditText editText;
+    String queryString;
 
 
-    public BasicTextViewFragment() {
+    public AsyncInternetFragment() {
         // Required empty public constructor
     }
 
-    // TODO: Rename and change types and number of parameters
-    public static BasicTextViewFragment newInstance() {
-        BasicTextViewFragment fragment = new BasicTextViewFragment();
+
+    public static AsyncInternetFragment newInstance() {
+        AsyncInternetFragment fragment = new AsyncInternetFragment();
         Bundle args = new Bundle();
 
         fragment.setArguments(args);
@@ -40,15 +47,20 @@ public class BasicTextViewFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_basic_text_view, container, false);
+        return inflater.inflate(R.layout.fragment_async_internet, container, false);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ((MyNavigation)getActivity()).setActionBarTitle(getString(R.string.basic_text_view));
 
+        ((MyNavigation)getActivity()).setActionBarTitle("Async internet");
 
-
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                queryString = editText.getText().toString();
+            }
+        });
     }
 }

@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.bangcode.myexperiments.R;
+import com.example.bangcode.myexperiments.activity.MyNavigation;
 
 
 public class ImplicitsIntentFragment extends Fragment implements View.OnClickListener{
@@ -60,7 +61,7 @@ public class ImplicitsIntentFragment extends Fragment implements View.OnClickLis
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getActivity().setTitle(getString(R.string.implisitintent));
+        ((MyNavigation)getActivity()).setActionBarTitle(getString(R.string.implisitintent));
 
         mWebButton= view.findViewById(R.id.open_web_button);
         mWebButton.setOnClickListener(this);

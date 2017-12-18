@@ -46,7 +46,6 @@
     <string name="basic_fragment">Basic Text</string>
 
 
-
     <!--TODO: implicits intent-->
     <string name="edittext_url">http://developer.android.com</string>
     <string name="button_url">Open Website</string>
@@ -57,4 +56,40 @@
     <string name="edittext_share">\'Orion techno adalah rumah pembuat software, multimedia dan juga smarthome</string>
     <string name="button_share">Share Konten Ini </string>
     <string name="implisitintent">Implisit Intent</string>
+    <string name="show">Show</string>
+    <string name="enter">Enter a Message</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="nothing_enter">Nothing Entered</string>
+    <string name="alert">Alert</string>
+    <string name="alertMessage">Click Ok to continue, or Cancel to Stop !</string>
+    <string name="ok">OK</string>
+    <string name="pressed_ok">Pressed OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="pressed_cancel">Pressed Cancel</string>
+    <string name="picker">Picker</string>
+    <string name="choose_date_time">Choose Date Time</string>
+    <string name="date_button">Date</string>
+    <string name="button_time">Time</string>
+
+
+    <!--date picker-->
+    <string name="date_picker">datePicker</string>
+    <string name="time_picker">timePicker</string>
+    <string name="spinner">Spinner</string>
+
+    <!--labels array for spinner-->
+    <string-array name="labels_array">
+        <item>Home</item>
+        <item>Work</item>
+        <item>Mobile</item>
+        <item>Other</item>
+    </string-array>
+
+    <!--async internet-->
+
+    <string name="instruction_async">Masukkan nama buku atau bagian dari nama buku</string>
+    <string name="button_text_async">Cari Buku</string>
+    <string name="input_hint_async">Masukkan Judul Buku...</string>
+
 </resources>

@@ -17,6 +17,15 @@
             android:icon="@drawable/ic_web_black"
             android:title="Implisit Intent" />
 
+        <item
+            android:id="@+id/textEntry"
+            android:icon="@drawable/ic_entry_black"
+            android:title="Text Entry" />
+        <item
+            android:id="@+id/asyncme"
+            android:icon="@drawable/ic_entry_black"
+            android:title="Async" />
+
     </group>
 
     <!--<item android:title="Communicate">-->

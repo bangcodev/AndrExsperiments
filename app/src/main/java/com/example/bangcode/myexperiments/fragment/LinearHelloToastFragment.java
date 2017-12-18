@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.bangcode.myexperiments.R;
+import com.example.bangcode.myexperiments.activity.MyNavigation;
 
 
 public class LinearHelloToastFragment extends Fragment {
@@ -43,9 +44,14 @@ public class LinearHelloToastFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
 
+        if(savedInstanceState!=null){
+            mCount=savedInstanceState.getInt("mycount",0);
+//            mShowCount=getActivity().findViewById(R.id.show_count);
+//            mShowCount.setText(Integer.toString(mCount));
+//            Log.e(TAG, "onCreate: ");
         }
+
     }
 
     @Override
@@ -55,12 +61,13 @@ public class LinearHelloToastFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_hello_toast, container, false);
     }
 
+
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        ((MyNavigation)getActivity()).setActionBarTitle(getString(R.string.linear_hello_toast));
 
 
-        getActivity().setTitle(getString(R.string.linear_hello_toast));
 
         mShowCount = view.findViewById(R.id.show_count);
         showToast = view.findViewById(R.id.button_toast);
@@ -71,8 +78,9 @@ public class LinearHelloToastFragment extends Fragment {
             }
         });
 
-        countUp = view.findViewById(R.id.button_count);
 
+
+        countUp = view.findViewById(R.id.button_count);
 
         countUp.setOnTouchListener(new View.OnTouchListener() {
             private Handler mHandler;
@@ -115,5 +123,9 @@ public class LinearHelloToastFragment extends Fragment {
         Toast.makeText(getActivity(), getString(R.string.hello_toast), Toast.LENGTH_SHORT).show();
     }
 
-
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("mycount",mCount);
+    }
 }

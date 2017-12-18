@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.bangcode.myexperiments.R;
+import com.example.bangcode.myexperiments.activity.MyNavigation;
 
 
 public class RelativeHelloToastFragment extends Fragment implements View.OnClickListener{
@@ -53,7 +54,8 @@ public class RelativeHelloToastFragment extends Fragment implements View.OnClick
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getActivity().setTitle(getString(R.string.relative_hello_toast));
+        ((MyNavigation)getActivity()).setActionBarTitle(getString(R.string.relative_hello_toast));
+
 
         mShowCount=view.findViewById(R.id.show_count_relative);
         showToast=view.findViewById(R.id.button_toast_relative);
