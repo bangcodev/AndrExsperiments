@@ -17,16 +17,19 @@ import com.example.bangcode.myexperiments.service.SimpleAsync;
 
 
 public class AsyncFragment extends Fragment {
-    private static final String TAG=AsyncFragment.class.getSimpleName();
+    private static final String TAG = AsyncFragment.class.getSimpleName();
 
-    private static final String TEXT_STATE="current Text";
+    private static final String TEXT_STATE = "current_Text";
+
 
     private TextView mTextview;
+    private Button button;
+    private String myString="Hello World";
+
 
     public AsyncFragment() {
         // Required empty public constructor
     }
-
 
 
     public static AsyncFragment newInstance() {
@@ -42,42 +45,45 @@ public class AsyncFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
 
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_async, container, false);
+        View view = inflater.inflate(R.layout.fragment_async, container, false);
 
-        if(savedInstanceState!=null){
-            Log.d(TAG, "onCreateView: " +savedInstanceState.getString(TEXT_STATE));
-        }
 
         return view;
     }
+
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        ((MyNavigation)getActivity()).setActionBarTitle("Async");
+        ((MyNavigation) getActivity()).setActionBarTitle("Async");
 
 
-        Button button;
+        mTextview = view.findViewById(R.id.textview1);
 
-        mTextview= view.findViewById(R.id.textview1);
-        button= view.findViewById(R.id.buttonasync);
+//        if (savedInstanceState != null) {
+//
+//            Log.d(TAG, "onViewCreated: " + savedInstanceState.getString(TEXT_STATE));
+//            mTextview.setText(savedInstanceState.getString(TEXT_STATE));
+//        }
 
+        mTextview.setText(myString);
+
+        button = view.findViewById(R.id.buttonasync);
 
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mTextview.setText("Napping ...");
-
-                new SimpleAsync(mTextview).execute();
+                new SimpleAsync(mTextview,myString).execute();
+                Log.d(TAG, "onClick: "+myString);
             }
         });
     }
@@ -86,7 +92,13 @@ public class AsyncFragment extends Fragment {
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
-        outState.putString(TEXT_STATE, mTextview.getText().toString());
+        outState.putString(TEXT_STATE, myString);
+
+    }
+
+    @Override
+    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
+        super.onViewStateRestored(savedInstanceState);
 
     }
 }

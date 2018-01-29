@@ -12,9 +12,11 @@ import java.util.Random;
 public class SimpleAsync extends AsyncTask<Void, Void, String> {
 
     TextView mTextView;
+    String myString;
 
-    public SimpleAsync(TextView tv) {
+    public SimpleAsync(TextView tv, String myString) {
         mTextView = tv;
+        this.myString=myString;
     }
 
     @Override
@@ -35,7 +37,9 @@ public class SimpleAsync extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPostExecute(String s) {
-        mTextView.setText(s);
+//        mTextView.setText(s);
+        myString=s;
+
     }
 
 

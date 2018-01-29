@@ -61,7 +61,7 @@ public class MyNavigation extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        changeFragment(PAGE_TAB_HELLOTOAST);
+        changeFragment(PAGE_TAB_ASYNC);
 
         setActionBarTitle("Main Fragment");
 
@@ -148,7 +148,7 @@ public class MyNavigation extends AppCompatActivity
                 break;
             case PAGE_TAB_ASYNC:
 
-                    currentFragment= TabAsync.newInstance();
+                    currentFragment= AsyncFragment.newInstance();
 
                 break;
 
